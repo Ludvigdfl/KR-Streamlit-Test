@@ -20,14 +20,14 @@ def I1_Lexical_richness(text):
     return len(countable_words(text)) / len(text)
 
 
-def I2_Lexical_Precision(text):
-    nlp = spacy.load("en_core_web_lg")
-    doc = nlp(text)
-    for t in doc:
-        print(t.pos_, t.lemma_)
+# def I2_Lexical_Precision(text):
+#     nlp = spacy.load("en_core_web_lg")
+#     doc = nlp(text)
+#     for t in doc:
+#         print(t.pos_, t.lemma_)
 
 
-I2_Lexical_Precision("He read fast")
+# I2_Lexical_Precision("He read fast")
 
 
 st.title(f"Streamlit App")
@@ -52,5 +52,6 @@ if uploaded_file is not None:
             st.write(message["role"])
             st.write(message["content"])
   
+
 
  
